@@ -13,14 +13,6 @@ public class ClassroomServiceImpl implements ClassroomService {
 		return repo.createClassroom(classroom);
 	}
 
-	public String addTrainee(Long id) {
-		return repo.addTrainee(id);
-	}
-
-	public String removeTrainee(Long id) {
-		return repo.removeTrainee(id);
-	}
-
 	public String showAllClassrooms() {
 		return repo.showAllClassrooms();
 	}
@@ -31,6 +23,26 @@ public class ClassroomServiceImpl implements ClassroomService {
 
 	public String deleteClassroom(Long id) {
 		return repo.deleteClassroom(id);
+	}
+
+	@Override
+	public String createTrainee(String trainee) {
+		return repo.createTrainee(trainee);
+	}
+
+	@Override
+	public String showAllTrainees() {
+		return repo.showAllTrainees();
+	}
+
+	@Override
+	public String updateTrainee(Long id, String trainee) {
+		return repo.showAllTrainees();
+	}
+
+	@Override
+	public String deleteTrainee(Long id) {
+		return repo.deleteTrainee(id);
 	}
 
 }

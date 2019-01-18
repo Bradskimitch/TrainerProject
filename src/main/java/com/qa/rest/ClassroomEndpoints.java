@@ -13,42 +13,40 @@ import org.apache.log4j.Logger;
 
 import com.qa.service.ClassroomService;
 
-@Path("/account")
+@Path("/classroom")
 public class ClassroomEndpoints {
 
 	@Inject
 	private ClassroomService service;
 
-	@Path("json")
+	@Path("classroom")
 	@GET
 	@Produces({ "application/json" })
 	public String getAllAccounts() {
 		return service.showAllClassrooms();
 	}
 
-	@Path("json")
+	@Path("classroom")
 	@POST
 	@Produces({ "application/json" })
 	public String addAccount(String classroom) {
 		return service.createClassroom(classroom);
 	}
 
-	@Path("json/{id}")
+	@Path("classroom/{id}")
 	@DELETE
 	@Produces({ "application/json" })
 	public String deleteAccount(@PathParam("id") Long id) {
 		return service.deleteClassroom(id);
 	}
 
-	/*
-	 * @Path("json/{id}")
-	 * 
-	 * @PUT
-	 * 
-	 * @Produces({ "application/json" }) public String
-	 * updateAccount(@PathParam("id") Long id, String account) { return
-	 * service.updateAccount(id, account); }
-	 */
+	@Path("classroom/{id}")
+	@PUT
+	@Produces({ "application/json" })
+	public String updateAccount(@PathParam("id") Long id, String classroom) {
+		return service.updateClassroom(id, classroom);
+	}
+
 	public void setService(ClassroomService service) {
 		this.service = service;
 	}
