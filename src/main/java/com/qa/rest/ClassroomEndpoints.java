@@ -22,29 +22,57 @@ public class ClassroomEndpoints {
 	@Path("classroom")
 	@GET
 	@Produces({ "application/json" })
-	public String getAllAccounts() {
+	public String showAllClassrooms() {
 		return service.showAllClassrooms();
 	}
 
 	@Path("classroom")
 	@POST
 	@Produces({ "application/json" })
-	public String addAccount(String classroom) {
+	public String createClassroom(String classroom) {
 		return service.createClassroom(classroom);
 	}
 
 	@Path("classroom/{id}")
 	@DELETE
 	@Produces({ "application/json" })
-	public String deleteAccount(@PathParam("id") Long id) {
+	public String deleteClassroom(@PathParam("id") Long id) {
 		return service.deleteClassroom(id);
 	}
 
 	@Path("classroom/{id}")
 	@PUT
 	@Produces({ "application/json" })
-	public String updateAccount(@PathParam("id") Long id, String classroom) {
+	public String updateClassroom(@PathParam("id") Long id, String classroom) {
 		return service.updateClassroom(id, classroom);
+	}
+	
+	@Path("trainee")
+	@GET
+	@Produces({ "application/json" })
+	public String showAllTrainees() {
+		return service.showAllTrainees();
+	}
+
+	@Path("trainee")
+	@POST
+	@Produces({ "application/json" })
+	public String createTrainee(String trainee) {
+		return service.createTrainee(trainee);
+	}
+
+	@Path("trainee/{id}")
+	@DELETE
+	@Produces({ "application/json" })
+	public String deleteTrainee(@PathParam("id") Long id) {
+		return service.deleteTrainee(id);
+	}
+
+	@Path("trainee/{id}")
+	@PUT
+	@Produces({ "application/json" })
+	public String updateTrainee(@PathParam("id") Long id, String trainee) {
+		return service.updateTrainee(id, trainee);
 	}
 
 	public void setService(ClassroomService service) {

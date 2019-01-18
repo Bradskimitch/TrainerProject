@@ -12,6 +12,5 @@ public interface ClassroomRepository {
 	String createTrainee(String trainee);
 	String showAllTrainees();
 	String updateTrainee(Long id, String trainee);
-	String deleteTrainee(Long id);
-	
+	String deleteTrainee(Long id);	
 }

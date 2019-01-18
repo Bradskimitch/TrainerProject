@@ -37,12 +37,14 @@ public class ClassroomServiceImpl implements ClassroomService {
 
 	@Override
 	public String updateTrainee(Long id, String trainee) {
-		return repo.showAllTrainees();
+		return repo.updateTrainee(id, trainee);
 	}
 
 	@Override
 	public String deleteTrainee(Long id) {
 		return repo.deleteTrainee(id);
 	}
+
+	
 
 }

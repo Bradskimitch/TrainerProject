@@ -18,10 +18,9 @@ public class Trainee {
 	@Id
 	private Long traineeID;
 	private String trainee;
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn
-	private Classroom classroom;
-	
+	 @ManyToOne(fetch = FetchType.LAZY)
+	 @JoinColumn (name="classroomID")
+	 private Classroom classroom;
 	public Trainee() {
 
 	}
@@ -29,14 +28,18 @@ public class Trainee {
 	public Trainee(String trainee) {
 		this.trainee = trainee;
 	}
-
+/*
 	public void setClassroom(Classroom classroom) {
 		this.classroom = classroom;
-		if (!classroom.getTrainees().contains(this)) { 
+		if (!classroom.getTrainees().contains(this)) {
 			classroom.getTrainees().add(this);
 		}
 	}
 
+	public Classroom getClassroom() {
+		return classroom;
+	}
+*/
 	public Long getTraineeID() {
 		return traineeID;
 	}
@@ -51,10 +54,6 @@ public class Trainee {
 
 	public void setTrainee(String trainee) {
 		this.trainee = trainee;
-	}
-
-	public Classroom getClassroom() {
-		return classroom;
 	}
 
 }
