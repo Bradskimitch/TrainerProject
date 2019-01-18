@@ -1,5 +1,5 @@
 INSERT INTO CLASSROOM (classroomID, trainer) VALUES (1, 'John')
-INSERT INTO TRAINEE (traineeID, trainee) VALUES (1, 'Johnny')
-INSERT INTO TRAINEE (traineeID, trainee) VALUES (2, 'OTHER')
+INSERT INTO TRAINEE (traineeID, trainee, "CLASSROOM_CLASSROOMID") VALUES (1, 'Johnny', 1)
+INSERT INTO TRAINEE (traineeID, trainee, CLASSROOM_CLASSROOMID) VALUES (2, 'OTHER', 1)
 INSERT INTO ACCOUNT (id, firstName, lastName, accountNumber) VALUES (2, 'Jane', 'Doe', '1235')
 INSERT INTO ACCOUNT (id, firstName, lastName, accountNumber) VALUES (3, 'Jim', 'Taylor', '1236')
