@@ -24,7 +24,7 @@ public class Trainee {
 	private String trainee;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn (name="classroomID")
+	@JoinColumn (name="classroom")
 	private Classroom classroom;
 
 	public Trainee() {
@@ -57,5 +57,15 @@ public class Trainee {
 	public void setTrainee(String trainee) {
 		this.trainee = trainee;
 	}
+
+	public Classroom getClassroom() {
+		return classroom;
+	}
+
+	public void setClassroom(Classroom classroom) {
+		this.classroom = classroom;
+	}
+	
+	
 
 }

@@ -30,7 +30,7 @@ public class ClassroomDBRepository implements ClassroomRepository {
 	public String createClassroom(String classroom) {
 		Classroom aClassroom = util.getObjectForJSON(classroom, Classroom.class);
 		manager.persist(aClassroom);
-		return "Classroom Created";
+		return "{Classroom Created}";
 	}
 
 	public String showAllClassrooms() {

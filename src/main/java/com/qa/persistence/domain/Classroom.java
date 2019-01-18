@@ -23,10 +23,8 @@ import javax.persistence.Table;
 public class Classroom {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Id
-	//@Column(name = "CLASSROOM_ID")
 	private Long classroomID;
 	
-	//@Column(name = "TRAINER")
 	private String trainer;
 	
 	// @OneToMany(cascade = CascadeType.ALL, mappedBy = "classroom")
@@ -61,5 +59,15 @@ public class Classroom {
 	public void setTrainer(String trainer) {
 		this.trainer = trainer;
 	}
+
+	public List<Trainee> getTrainees() {
+		return trainees;
+	}
+
+	public void setTrainees(List<Trainee> trainees) {
+		this.trainees = trainees;
+	}
+	
+	
 
 }
